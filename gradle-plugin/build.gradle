@@ -1,0 +1,21 @@
+apply plugin: 'groovy'
+apply plugin: 'java-gradle-plugin'
+
+gradlePlugin {
+    plugins {
+        robolectric {
+            id = "org.robolectric"
+            implementationClass = "org.robolectric.GradlePlugin"
+        }
+    }
+}
+
+dependencies {
+    compile gradleApi()
+    compile localGroovy()
+
+    // Testing dependencies
+    testCompile "junit:junit:4.8.2"
+    testCompile "org.hamcrest:hamcrest-core:1.3"
+    testCompile "com.google.testing.compile:compile-testing:0.6"
+}
