@@ -918,7 +918,7 @@ public class ShadowAccessibilityNodeInfo {
       performedActionAndArgsList = new LinkedList<>();
     }
 
-    performedActionAndArgsList.add(new Pair<Integer, Bundle>(new Integer(action), arguments));
+    performedActionAndArgsList.add(new Pair<>(action, arguments));
     return (actionListener != null) ? actionListener.onPerformAccessibilityAction(action, arguments)
       : true;
   }
