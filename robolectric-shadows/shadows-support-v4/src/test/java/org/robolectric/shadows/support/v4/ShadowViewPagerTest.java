@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.util.TestRunnerWithManifest;
 
-import static junit.framework.Assert.*;
+import static org.junit.Assert.*;
 
 @RunWith(TestRunnerWithManifest.class)
 public class ShadowViewPagerTest {

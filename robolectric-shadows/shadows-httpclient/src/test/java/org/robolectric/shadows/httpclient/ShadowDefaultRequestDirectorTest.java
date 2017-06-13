@@ -1,6 +1,6 @@
 package org.robolectric.shadows.httpclient;
 
-import junit.framework.Assert;
+import org.junit.Assert;
 import org.apache.http.HttpRequest;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;

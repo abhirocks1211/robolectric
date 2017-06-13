@@ -9,7 +9,7 @@ import org.robolectric.util.TestRunnerWithManifest;
 
 import java.lang.reflect.Method;
 
-import static junit.framework.Assert.assertTrue;
+import static org.junit.Assert.assertTrue;
 
 @RunWith(TestRunnerWithManifest.class)
 public class ShadowPagerAdapterTest {
