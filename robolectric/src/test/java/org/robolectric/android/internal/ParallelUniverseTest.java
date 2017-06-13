@@ -1,8 +1,15 @@
 package org.robolectric.android.internal;
 
-import android.app.Application;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.never;
+import static org.mockito.Mockito.verify;
 
+import android.app.Application;
 import android.os.Build;
+import java.security.cert.CertificateException;
+import java.security.cert.CertificateFactory;
+import java.util.concurrent.atomic.AtomicBoolean;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,22 +22,15 @@ import org.robolectric.RuntimeEnvironment;
 import org.robolectric.Shadows;
 import org.robolectric.TestRunners;
 import org.robolectric.annotation.Config;
-import org.robolectric.android.internal.ParallelUniverse;
 import org.robolectric.internal.SdkConfig;
 import org.robolectric.manifest.AndroidManifest;
-import org.robolectric.res.*;
+import org.robolectric.res.ResourcePath;
+import org.robolectric.res.ResourceTable;
+import org.robolectric.res.ResourceTableFactory;
+import org.robolectric.res.RoutingResourceTable;
 import org.robolectric.res.builder.RobolectricPackageManager;
 import org.robolectric.shadows.ShadowApplication;
 import org.robolectric.shadows.ShadowLooper;
-
-import java.security.cert.CertificateException;
-import java.security.cert.CertificateFactory;
-import java.util.concurrent.atomic.AtomicBoolean;
-
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.never;
-import static org.mockito.Mockito.verify;
 
 @RunWith(TestRunners.SelfTest.class)
 public class ParallelUniverseTest {

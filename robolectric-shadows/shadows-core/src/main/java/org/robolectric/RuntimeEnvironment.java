@@ -1,13 +1,11 @@
 package org.robolectric;
 
-import android.app.Application;
-import android.content.pm.PackageManager;
+import static android.os.Build.VERSION_CODES.LOLLIPOP;
 
+import android.app.Application;
 import org.robolectric.res.ResourceTable;
 import org.robolectric.res.builder.RobolectricPackageManager;
 import org.robolectric.util.Scheduler;
-
-import static android.os.Build.VERSION_CODES.LOLLIPOP;
 
 public class RuntimeEnvironment {
   public static Application application;

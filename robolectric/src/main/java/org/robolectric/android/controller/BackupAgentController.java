@@ -2,7 +2,6 @@ package org.robolectric.android.controller;
 
 import android.app.backup.BackupAgent;
 import android.content.Context;
-
 import org.robolectric.RuntimeEnvironment;
 
 public class BackupAgentController<T extends BackupAgent> {

@@ -1,5 +1,8 @@
 package org.robolectric.android.controller;
 
+import static android.os.Build.VERSION_CODES.M;
+import static org.robolectric.util.ReflectionHelpers.ClassParameter.from;
+
 import android.app.Activity;
 import android.app.Application;
 import android.content.ComponentName;
@@ -19,12 +22,9 @@ import org.robolectric.ShadowsAdapter.ShadowActivityAdapter;
 import org.robolectric.ShadowsAdapter.ShadowApplicationAdapter;
 import org.robolectric.android.runtime.RuntimeAdapter;
 import org.robolectric.android.runtime.RuntimeAdapterFactory;
-import org.robolectric.shadow.api.Shadow;
 import org.robolectric.manifest.AndroidManifest;
+import org.robolectric.shadow.api.Shadow;
 import org.robolectric.util.ReflectionHelpers;
-
-import static android.os.Build.VERSION_CODES.M;
-import static org.robolectric.util.ReflectionHelpers.ClassParameter.from;
 
 public class ActivityController<T extends Activity> extends ComponentController<ActivityController<T>, T> {
   private final ShadowsAdapter shadowsAdapter;

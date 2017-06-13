@@ -1,13 +1,11 @@
 package org.robolectric.shadows;
 
 import android.media.AudioManager;
-
+import java.util.HashMap;
+import java.util.Map;
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
 import org.robolectric.util.ReflectionHelpers;
-
-import java.util.HashMap;
-import java.util.Map;
 
 @SuppressWarnings({"UnusedDeclaration"})
 @Implements(AudioManager.class)

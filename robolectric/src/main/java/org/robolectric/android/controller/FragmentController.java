@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.widget.LinearLayout;
 import org.robolectric.Robolectric;
 import org.robolectric.ShadowsAdapter;
-import org.robolectric.util.FragmentTestUtil;
 
 /**
  * Controller class for driving fragment lifecycles, similar to {@link ActivityController}.

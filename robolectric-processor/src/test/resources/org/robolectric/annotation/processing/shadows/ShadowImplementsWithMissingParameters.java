@@ -1,7 +1,7 @@
 package org.robolectric.annotation.processing.shadows;
 
-import org.robolectric.annotation.Implements;
 import com.example.objects.ParameterizedDummy;
+import org.robolectric.annotation.Implements;
 
 @Implements(ParameterizedDummy.class)
 public class ShadowImplementsWithMissingParameters {

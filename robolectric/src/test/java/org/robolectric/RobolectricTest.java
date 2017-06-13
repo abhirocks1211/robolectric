@@ -1,46 +1,44 @@
 package org.robolectric;
 
-import android.app.Activity;
-import android.content.ActivityNotFoundException;
-import android.content.Context;
-import android.content.ContextWrapper;
-import android.content.Intent;
-import android.os.Bundle;
-import android.os.Handler;
-import android.view.Display;
-import android.view.View;
-import android.view.ViewParent;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.invocation.InvocationOnMock;
-import org.mockito.stubbing.Answer;
-import org.robolectric.annotation.Implementation;
-import org.robolectric.annotation.Implements;
-import org.robolectric.shadow.api.Shadow;
-import org.robolectric.internal.ShadowProvider;
-import org.robolectric.res.builder.RobolectricPackageManager;
-import org.robolectric.shadows.ShadowApplication;
-import org.robolectric.shadows.ShadowDisplay;
-import org.robolectric.shadows.ShadowLooper;
-import org.robolectric.shadows.ShadowView;
-import org.robolectric.util.ReflectionHelpers;
-import org.robolectric.android.TestOnClickListener;
-
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.doAnswer;
 import static org.mockito.Mockito.mock;
 import static org.robolectric.Shadows.shadowOf;
+
+import android.app.Activity;
+import android.content.ActivityNotFoundException;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
+import android.view.Display;
+import android.view.View;
+import android.view.ViewParent;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.invocation.InvocationOnMock;
+import org.mockito.stubbing.Answer;
+import org.robolectric.android.TestOnClickListener;
+import org.robolectric.annotation.Implementation;
+import org.robolectric.annotation.Implements;
+import org.robolectric.internal.ShadowProvider;
+import org.robolectric.res.builder.RobolectricPackageManager;
+import org.robolectric.shadow.api.Shadow;
+import org.robolectric.shadows.ShadowApplication;
+import org.robolectric.shadows.ShadowDisplay;
+import org.robolectric.shadows.ShadowLooper;
+import org.robolectric.shadows.ShadowView;
+import org.robolectric.util.ReflectionHelpers;
 
 @RunWith(TestRunners.SelfTest.class)
 public class RobolectricTest {

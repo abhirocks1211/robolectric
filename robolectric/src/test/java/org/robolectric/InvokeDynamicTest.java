@@ -1,5 +1,7 @@
 package org.robolectric;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.annotation.Config;
@@ -7,10 +9,8 @@ import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
 import org.robolectric.annotation.RealObject;
 import org.robolectric.annotation.internal.Instrument;
-import org.robolectric.shadow.api.Shadow;
 import org.robolectric.internal.ShadowExtractor;
-
-import static org.assertj.core.api.Assertions.assertThat;
+import org.robolectric.shadow.api.Shadow;
 
 @RunWith(TestRunners.SelfTest.class)
 public class InvokeDynamicTest {

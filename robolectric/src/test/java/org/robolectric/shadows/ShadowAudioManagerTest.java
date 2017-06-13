@@ -1,14 +1,13 @@
 package org.robolectric.shadows;
 
-import android.media.AudioManager;
+import static org.assertj.core.api.Assertions.assertThat;
 
+import android.media.AudioManager;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.Shadows;
 import org.robolectric.TestRunners;
-
-import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(TestRunners.MultiApiSelfTest.class)
 public class ShadowAudioManagerTest {

@@ -1,27 +1,26 @@
 package org.robolectric.shadows;
 
-import android.telephony.CellLocation;
-import android.telephony.CellInfo;
-import android.telephony.PhoneStateListener;
-import android.telephony.TelephonyManager;
-import java.util.ArrayList;
-import java.util.List;
-
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.robolectric.annotation.Config;
-import org.robolectric.TestRunners;
-
 import static android.content.Context.TELEPHONY_SERVICE;
 import static android.os.Build.VERSION_CODES.JELLY_BEAN_MR1;
 import static android.os.Build.VERSION_CODES.JELLY_BEAN_MR2;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
-import static org.robolectric.RuntimeEnvironment.*;
+import static org.robolectric.RuntimeEnvironment.application;
 import static org.robolectric.Shadows.shadowOf;
 import static org.robolectric.shadow.api.Shadow.newInstanceOf;
+
+import android.telephony.CellInfo;
+import android.telephony.CellLocation;
+import android.telephony.PhoneStateListener;
+import android.telephony.TelephonyManager;
+import java.util.ArrayList;
+import java.util.List;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.robolectric.TestRunners;
+import org.robolectric.annotation.Config;
 
 @RunWith(TestRunners.MultiApiSelfTest.class)
 public class ShadowTelephonyManagerTest {

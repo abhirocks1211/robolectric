@@ -7,9 +7,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.SimpleFileVisitor;
 import java.nio.file.attribute.BasicFileAttributes;
-import java.util.ArrayDeque;
 import java.util.LinkedHashSet;
-import java.util.Queue;
 import java.util.Set;
 
 public class TempDirectory {

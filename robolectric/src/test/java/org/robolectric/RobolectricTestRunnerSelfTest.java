@@ -1,11 +1,18 @@
 package org.robolectric;
 
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.doAnswer;
+import static org.mockito.Mockito.mock;
+
 import android.app.Application;
 import android.content.res.Resources;
 import android.os.Build;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.List;
+import javax.annotation.Nonnull;
 import org.assertj.core.api.Assertions;
 import org.hamcrest.CoreMatchers;
-import javax.annotation.Nonnull;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Test;
@@ -17,15 +24,6 @@ import org.robolectric.annotation.Config;
 import org.robolectric.manifest.AndroidManifest;
 import org.robolectric.res.builder.RobolectricPackageManager;
 import org.robolectric.util.ReflectionHelpers;
-
-import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.List;
-
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.Mockito.doAnswer;
-import static org.mockito.Mockito.mock;
-import static org.robolectric.Shadows.shadowOf;
 
 @RunWith(RobolectricTestRunnerSelfTest.RunnerForTesting.class)
 public class RobolectricTestRunnerSelfTest {

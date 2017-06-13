@@ -5,9 +5,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.widget.LinearLayout;
-
 import org.robolectric.Robolectric;
-import org.robolectric.ShadowsAdapter;
 import org.robolectric.android.controller.ActivityController;
 import org.robolectric.android.controller.ComponentController;
 

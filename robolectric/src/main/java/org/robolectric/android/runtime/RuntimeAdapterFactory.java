@@ -1,7 +1,6 @@
 package org.robolectric.android.runtime;
 
 import android.os.Build;
-
 import org.robolectric.RuntimeEnvironment;
 
 public class RuntimeAdapterFactory {

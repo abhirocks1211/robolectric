@@ -1,5 +1,11 @@
 package org.robolectric.shadows;
 
+import static android.os.Build.VERSION_CODES.LOLLIPOP;
+import static android.os.Build.VERSION_CODES.M;
+import static org.robolectric.Shadows.shadowOf;
+import static org.robolectric.shadow.api.Shadow.directlyOn;
+import static org.robolectric.shadow.api.Shadow.invokeConstructor;
+
 import android.R;
 import android.app.Activity;
 import android.app.Application;
@@ -17,7 +23,12 @@ import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
-
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import org.robolectric.annotation.HiddenApi;
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
@@ -25,19 +36,6 @@ import org.robolectric.annotation.RealObject;
 import org.robolectric.fakes.RoboMenuItem;
 import org.robolectric.manifest.AndroidManifest;
 import org.robolectric.util.ReflectionHelpers;
-
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import static android.os.Build.VERSION_CODES.LOLLIPOP;
-import static android.os.Build.VERSION_CODES.M;
-import static org.robolectric.Shadows.shadowOf;
-import static org.robolectric.shadow.api.Shadow.directlyOn;
-import static org.robolectric.shadow.api.Shadow.invokeConstructor;
 
 @Implements(Activity.class)
 public class ShadowActivity extends ShadowContextThemeWrapper {

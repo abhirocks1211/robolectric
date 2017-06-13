@@ -1,15 +1,15 @@
 package org.robolectric.shadows;
 
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
+
 import android.os.Binder;
 import android.os.Parcel;
 import android.os.RemoteException;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.TestRunners;
-
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
-import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(TestRunners.MultiApiSelfTest.class)
 public class ShadowBinderTest {

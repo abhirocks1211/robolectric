@@ -10,7 +10,6 @@ import android.content.res.Configuration;
 import android.graphics.Rect;
 import android.os.IBinder;
 import android.view.ViewRootImpl;
-
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.android.fakes.RoboInstrumentation;
 import org.robolectric.util.ReflectionHelpers;

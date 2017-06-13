@@ -1,5 +1,14 @@
 package org.robolectric.shadows;
 
+import static android.os.Build.VERSION_CODES.JELLY_BEAN_MR1;
+import static android.os.Build.VERSION_CODES.JELLY_BEAN_MR2;
+import static android.os.Build.VERSION_CODES.KITKAT;
+import static android.os.Build.VERSION_CODES.LOLLIPOP;
+import static android.os.Build.VERSION_CODES.LOLLIPOP_MR1;
+import static android.os.Build.VERSION_CODES.N;
+import static org.robolectric.RuntimeEnvironment.getApiLevel;
+import static org.robolectric.shadow.api.Shadow.newInstanceOf;
+
 import android.accounts.IAccountManager;
 import android.app.admin.IDevicePolicyManager;
 import android.content.BroadcastReceiver;
@@ -21,6 +30,9 @@ import android.os.Looper;
 import android.os.UserHandle;
 import android.view.Display;
 import android.view.accessibility.AccessibilityManager;
+import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
@@ -28,14 +40,6 @@ import org.robolectric.annotation.RealObject;
 import org.robolectric.annotation.Resetter;
 import org.robolectric.util.ReflectionHelpers;
 import org.robolectric.util.ReflectionHelpers.ClassParameter;
-
-import java.io.File;
-import java.util.HashMap;
-import java.util.Map;
-
-import static android.os.Build.VERSION_CODES.*;
-import static org.robolectric.RuntimeEnvironment.getApiLevel;
-import static org.robolectric.shadow.api.Shadow.newInstanceOf;
 
 @Implements(className = ShadowContextImpl.CLASS_NAME)
 public class ShadowContextImpl {

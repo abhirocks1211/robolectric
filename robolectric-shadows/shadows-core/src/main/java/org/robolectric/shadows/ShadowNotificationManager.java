@@ -5,15 +5,14 @@ import android.app.NotificationManager;
 import android.os.Build;
 import android.service.notification.StatusBarNotification;
 import com.google.common.collect.ImmutableList;
-import org.robolectric.RuntimeEnvironment;
-import org.robolectric.annotation.Implementation;
-import org.robolectric.annotation.Implements;
-import org.robolectric.util.ReflectionHelpers;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import org.robolectric.RuntimeEnvironment;
+import org.robolectric.annotation.Implementation;
+import org.robolectric.annotation.Implements;
+import org.robolectric.util.ReflectionHelpers;
 
 @SuppressWarnings({"UnusedDeclaration"})
 @Implements(value = NotificationManager.class, looseSignatures = true)
