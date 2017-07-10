@@ -43,7 +43,8 @@ public class ShadowNotification {
     if (getApiLevel() >= N) {
       return realNotification.extras.getCharSequence(Notification.EXTRA_INFO_TEXT);
     } else {
-      return findText(applyContentView(), "info");
+      String resourceName = getApiLevel() >= N ? "header_text" : "info";
+      return findText(applyContentView(), resourceName);
     }
   }
 
@@ -71,7 +72,8 @@ public class ShadowNotification {
     if (getApiLevel() >= N) {
       return realNotification.extras.getCharSequence(Notification.EXTRA_SUMMARY_TEXT);
     } else {
-      return findText(applyBigContentView(),  "text");
+      String resourceName = getApiLevel() >= N ? "header_text" : "text";
+      return findText(applyBigContentView(), resourceName);
     }
   }
 
