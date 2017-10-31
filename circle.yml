@@ -7,7 +7,7 @@ jobs:
     resource_class: xlarge
     environment:
       JVM_OPTS: -Xmx3172m
-      GRADLE_MAX_PARALLEL_FORKS: 2
+      GRADLE_MAX_PARALLEL_FORKS: 3
     steps:
       - checkout
       - run:
