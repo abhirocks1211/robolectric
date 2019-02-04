@@ -10,6 +10,7 @@ shadows {
 }
 
 dependencies {
+    implementation project(":shadowapi")
     compileOnly project(":shadows:framework")
     implementation project(":annotations")
     implementation "com.google.guava:guava:27.0.1-jre"

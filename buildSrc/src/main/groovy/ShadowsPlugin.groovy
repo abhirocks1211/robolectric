@@ -14,6 +14,9 @@ class ShadowsPlugin implements Plugin<Project> {
 
         project.dependencies {
             annotationProcessor project.project(":processor")
+
+            // for @Generated (missing from Java 9 on)
+            compileOnly 'javax.annotation:javax.annotation-api:1.3.1'
         }
 
         def compileJavaTask = project.tasks["compileJava"]

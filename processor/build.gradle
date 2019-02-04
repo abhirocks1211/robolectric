@@ -33,13 +33,16 @@ tasks['classes'].dependsOn(generateSdksFile)
 
 dependencies {
     implementation project(":annotations")
+    implementation project(":shadowapi")
 
     compileOnly "com.google.code.findbugs:jsr305:3.0.2"
     implementation "com.google.guava:guava:27.0.1-jre"
     implementation "com.google.code.gson:gson:2.8.2"
     implementation 'ch.raffael.pegdown-doclet:pegdown-doclet:1.3'
 
-    implementation files(org.gradle.internal.jvm.Jvm.current().getToolsJar())
+    if (!JavaVersion.current().java9Compatible) {
+        implementation files(org.gradle.internal.jvm.Jvm.current().getToolsJar())
+    }
 
     testImplementation "junit:junit:4.12"
     testImplementation "org.mockito:mockito-core:2.5.4"

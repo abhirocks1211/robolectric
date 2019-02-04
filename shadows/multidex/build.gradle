@@ -11,6 +11,7 @@ shadows {
 dependencies {
     compileOnly project(":shadows:framework")
     implementation project(":annotations")
+    implementation project(":shadowapi")
 
     compileOnly "com.android.support:multidex:1.0.1"
 

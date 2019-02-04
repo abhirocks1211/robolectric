@@ -45,8 +45,7 @@ public class UnsafeAccess {
 
     @Override
     public <T> Class<?> defineClass(Class<T> iClass, String reflectorClassName, byte[] bytecode) {
-      return unsafe.defineClass(
-          reflectorClassName, bytecode, 0, bytecode.length, iClass.getClassLoader(), null);
+      return unsafe.defineAnonymousClass(iClass, bytecode, null);
     }
 
     @Override
